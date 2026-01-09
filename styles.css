@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f1427, #36478d);
+    position: relative;
+    overflow: auto;
+}
+
+/* Header */
+.header {
+    padding: 33px 50px 32px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    gap: 16px;
+}
+
+.header-title {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    text-align: right;
+    margin: 0;
+}
+
+/* Intro Section */
+.intro-section {
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: 48px;
+    color: white;
+}
+
+.intro-title {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 82px;
+}
+
+.intro-text {
+    max-width: 1073px;
+    margin: 0 auto;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.intro-paragraph {
+    margin-bottom: 32px;
+}
+
+.mono-text {
+    font-family: 'DM Mono', monospace;
+}
+
+/* Team Section */
+.team-section {
+    margin: 0 50px;
+    background: white;
+    border-radius: 30px 30px 0 0;
+    padding: 50px 83px 80px;
+}
+
+.team-heading {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 51px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 91px;
+    justify-items: center;
+}
+
+/* Team Member Card */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.member-image-container {
+    aspect-ratio: 1;
+    width: 100%;
+    border-radius: 0 50px 0 0;
+    overflow: hidden;
+    background-color: #d9d9d9;
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.member-name {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 24px;
+    color: #0f1427;
+    margin: 0;
+}
+
+.member-role {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #0f1427;
+    margin: 0;
+}
+
+.role-primary {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Responsive Design */
+
+/* Extra Large screens */
+@media (max-width: 1280px) {
+    .team-section {
+        margin: 0 30px;
+        padding: 50px 50px 80px;
+    }
+    .team-grid {
+        gap: 91px;
+    }
+}
+
+/* Large screens - 3 columns */
+@media (max-width: 1024px) {
+    .header {
+        padding: 33px 30px 32px;
+    }
+    
+    .header-title {
+        font-size: 32px;
+    }
+    
+    .header-subtitle {
+        font-size: 20px;
+    }
+    
+    .intro-title {
+        font-size: 36px;
+        margin-bottom: 48px;
+    }
+    
+    .intro-text {
+        font-size: 22px;
+        max-width: 800px;
+    }
+    
+    .team-section {
+        padding: 50px 30px 80px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+}
+
+/* Medium screens - 2 columns */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 640px) {
+    .header {
+        padding: 55px 20px 32px;
+    }
+    
+    .header-title {
+        font-size: 36px;
+    }
+    
+    .header-subtitle {
+        font-size: 20px;
+    }
+    
+    .intro-section {
+        margin-bottom: 32px;
+    }
+    
+    .intro-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    
+    .intro-text {
+        font-size: 20px;
+        max-width: 358px;
+    }
+    
+    .team-section {
+        margin: 0 20px;
+        padding: 62px 20px 80px;
+    }
+    
+    .team-heading {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 56px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
